@@ -15,11 +15,13 @@
 * [Core] Performance optimizations.
 * [Core] Fixed a logging issue when dealing with IOExceptions.
 * [Core] Fixed a typo in the global logger class (BREAKING CHANGE! Please find new example in Wiki).
+* [Core] Added support for project compilation under macOS (Thanks to @FourOnes).
 * [Client] The certificate for encryption is now loaded as a _X509Certificate2_ which prodives more data (Thanks to @cvellan).
 * [Client] Fixed an issue in _ManagedClient_ which can cause the client to stop when publishing subscriptions.
 * [Client] Fixed an issue in _ManagedClient_ which prevents changing the QoS of an existing subscription (BREAKING CHANGE!).
 * [Client] Fixed an issue in _MqttClientOptionsBuilder_ which prevents adding TLS options to the client options when calling _Build()_. (Thanks to @cvellan).
 * [Client] Added an overload for subscribing at both clients which reduces required code.
+* [Client] Added the _ClientId_ to the application message interceptor context.
 * [Server] The application message interceptor can now delete any received application message.
 * [Server] Added a ConnectionValidator context to align with other APIs (BREAKING CHANGE! Please find new example in Wiki).
 * [Server] Added an interface for the _MqttServerOptions_.
@@ -27,6 +29,7 @@
 * [Server] Fixed a security issue which sends retained packages to a failed subscription.
 * [Server] Fixed the response (MaximumQoS) of a subscription (Thanks to @redbeans2017).
 * [Server] The keep alive timeouts are now checked for every client (Thanks to @RainerMueller82).
+* [Server] The used IP addresses can be specified now (IPAddress.Any as default).
     </releaseNotes>
     <copyright>Copyright Christian Kratky 2016-2017</copyright>
     <tags>MQTT Message Queue Telemetry Transport MQTTClient MQTTServer Server MQTTBroker Broker NETStandard IoT InternetOfThings Messaging Hardware Arduino Sensor Actuator M2M ESP Smart Home Cities Automation Xamarin</tags> 
